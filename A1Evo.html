@@ -1,5 +1,4 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<!--
 Copyright (c) 2025 OCA (https://www.youtube.com/@OCAudiophile)
 All rights reserved.
 
@@ -25,6 +24,7 @@ Special Notice:
 • Include this license notice in full.
 • Attribute the original author and provide a link to the official project or source.
 
+<!--
 Disclaimer:
 
 This software is provided "as is", without warranty of any kind, express or implied,
@@ -601,7 +601,11 @@ and noninfringement. Use at your own risk.
     .crossover-sliders {
         transition: all 1s ease-in-out;
     }
-  }    
+  }
+.short-gain-slider {
+  width: 150px;
+  vertical-align: middle;
+}  
   @media screen and (max-width: 979px){
     .crossover-sliders {
       gap: 40px;
@@ -824,49 +828,64 @@ and noninfringement. Use at your own risk.
   <div id="dialogEnhanceControls" style="display:none; margin-top: 0.2rem;"> <!-- CPC C filter modification -->
 <h4 
   style="color:#93c5fd; margin-bottom:0.2rem;" 
-  title="Use sparingly to further refine dialog according to your preferences.">
+  title="Use sparingly to further refine dialog to your preference.">
   Additional C Filters
 </h4>
-  <table style="width:25%; color:#CBD5E0; font-size:0.7rem; margin-left:auto; margin-right:auto;">
-    <thead>
-      <tr>
-        <th>Index</th>
-        <th>Frequency (Hz)</th>
-        <th>Gain (dB)</th>
-        <th>Q</th>
-      </tr>
-    </thead>
-    <tbody>
-	      <tr>
-        <td>1</td>
-        <td><input type="number" id="cFilterFreq1" value="80" step="5.0" style="width:60px;" min="50" max="12000"></td>
-        <td><input type="number" id="cFilterGain1" value="-3" step="0.5" style="width:45px;" min="-6" max="6"></td>
-        <td><input type="number" id="cFilterQ1" value="2" step="1.0" style="width:35px;" min="2" max="15"></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><input type="number" id="cFilterFreq2" value="120" step="5.0" style="width:60px;" min="50" max="12000"></td>
-        <td><input type="number" id="cFilterGain2" value="0" step="0.5" style="width:45px;" min="-6" max="6"></td>
-        <td><input type="number" id="cFilterQ2" value="15" step="1.0" style="width:35px;" min="2" max="15"></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><input type="number" id="cFilterFreq3" value="240" step="5.0" style="width:60px;" min="50" max="12000"></td>
-        <td><input type="number" id="cFilterGain3" value="0" step="0.5" style="width:45px;" min="-6" max="6"></td>
-        <td><input type="number" id="cFilterQ3" value="15" step="1.0" style="width:35px;" min="2" max="15"></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><input type="number" id="cFilterFreq4" value="2500" step="5.0" style="width:60px;" min="50" max="12000"></td>
-        <td><input type="number" id="cFilterGain4" value="3" step="0.5" style="width:45px;" min="-6" max="6"></td>
-        <td><input type="number" id="cFilterQ4" value="5" step="1.0" style="width:35px;" min="2" max="15"></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><input type="number" id="cFilterFreq5" value="5000" step="5.0" style="width:60px;" min="50" max="12000"></td>
-        <td><input type="number" id="cFilterGain5" value="3" step="0.5" style="width:45px;" min="-6" max="6"></td>
-        <td><input type="number" id="cFilterQ5" value="5" step="1.0" style="width:35px;" min="2" max="15"></td>
-      </tr>
+<table style="width:25%; color:#CBD5E0; font-size:0.7rem; margin-left:auto; margin-right:auto;">
+  <thead>
+    <tr>
+      <th>EQ</th>
+      <th>Frequency (Hz)</th>
+      <th>Gain (dB)</th>
+      <th>Q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><input type="number" id="cFilterFreq1" value="90" step="5.0" style="width:60px;" min="50" max="12000"></td>
+      <td>
+        <input type="range" id="cFilterGain1" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="-3">
+        <span id="cFilterGainVal1" style="display:inline-block;width:32px;text-align:right;">-3 dB</span>
+		</td>
+      <td><input type="number" id="cFilterQ1" value="2" step="1.0" style="width:35px;" min="2" max="15"></td>
+    </tr>
+	<tr>
+	  <td>2</td>
+	  <td><input type="number" id="cFilterFreq2" value="240" step="5.0" style="width:60px;" min="50" max="12000"></td>
+	  <td>
+        <input type="range" id="cFilterGain2" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="0">
+        <span id="cFilterGainVal2" style="display:inline-block;width:32px;text-align:right;">0 dB</span>
+	  </td>
+	<td><input type="number" id="cFilterQ2" value="15" step="1.0" style="width:35px;" min="2" max="15"></td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td><input type="number" id="cFilterFreq3" value="2500" step="5.0" style="width:60px;" min="50" max="12000"></td>
+	<td>
+    <input type="range" id="cFilterGain3" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="3">
+    <span id="cFilterGainVal3" style="display:inline-block;width:32px;text-align:right;">3 dB</span>
+	</td>
+	<td><input type="number" id="cFilterQ3" value="5" step="1.0" style="width:35px;" min="2" max="15"></td>
+	</tr>
+	<tr>
+	<td>4</td>
+	<td><input type="number" id="cFilterFreq4" value="5000" step="5.0" style="width:60px;" min="50" max="12000"></td>
+	<td>
+    <input type="range" id="cFilterGain4" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="3">
+    <span id="cFilterGainVal4" style="display:inline-block;width:35px;text-align:right;">3 dB</span>
+	</td>
+	<td><input type="number" id="cFilterQ4" value="5" step="1.0" style="width:35px;" min="2" max="15"></td>
+	</tr>
+	<tr>
+	<td>5</td>
+	<td><input type="number" id="cFilterFreq5" value="8000" step="5.0" style="width:60px;" min="50" max="12000"></td>
+	<td>
+    <input type="range" id="cFilterGain5" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="3">
+    <span id="cFilterGainVal5" style="display:inline-block;width:35px;text-align:right;">3 dB</span>
+	</td>
+	<td><input type="number" id="cFilterQ5" value="2" step="1.0" style="width:35px;" min="2" max="15"></td>
+	</tr>
     </tbody>
   </table>
 </div>
@@ -3879,6 +3898,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const value = customMaxFreqA[index];
     UpdateMaxFreqA(value, false);
   });
+// slider value update for cFilterGain sliders CPC
+document.addEventListener('DOMContentLoaded', function() {
+  for (let i = 1; i <= 5; i++) {
+    const slider = document.getElementById('cFilterGain' + i);
+    const valSpan = document.getElementById('cFilterGainVal' + i);
+    if (slider && valSpan) {
+      // Set initial value
+      valSpan.textContent = slider.value + ' dB';
+      // Update on input
+      slider.addEventListener('input', function() {
+        valSpan.textContent = this.value + ' dB';
+      });
+    }
+  }
+});
   document.getElementById('disableSpeakerInversion').addEventListener('change', function (event) {
     UpdateenableInversion(event.target.checked, false);
   });
@@ -3923,6 +3957,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var enhanceDialogCheckbox = document.getElementById('enhanceDialog');
   dialogControls.style.display = enhanceDialogCheckbox.checked ? '' : 'none';
 });
+
   const rolloffToggle = document.getElementById('enableRolloff');
   const rolloffFreq = document.getElementById('rolloffFreqInput');
   const rolloffSlope = document.getElementById('rolloffSlopeSelect');
@@ -12946,5 +12981,25 @@ micCalData.length = 0;
     logContainer.insertAdjacentHTML('beforeend', errorEntry);
     scrollToBottom();
   };})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Attach input event listeners to the dialogEnhanceControls gain sliders CPC
+  for (let i = 1; i <= 5; i++) {
+    const slider = document.getElementById(`cFilterGain${i}`);
+    const valueSpan = document.getElementById(`cFilterGainVal${i}`);
+    if (slider && valueSpan) {
+      slider.addEventListener('input', function () {
+        let val = parseFloat(slider.value);
+        let text = (val > 0 ? '+' : '') + val + ' dB';
+        valueSpan.textContent = text;
+      });
+      // Initialize display on load
+      let val = parseFloat(slider.value);
+      let text = (val > 0 ? '+' : '') + val + ' dB';
+      valueSpan.textContent = text;
+    }
+  }
+});
+
 </script>
 </body></html>
