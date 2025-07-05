@@ -845,46 +845,46 @@ and noninfringement. Use at your own risk.
       <td>1</td>
       <td><input type="number" id="cFilterFreq1" value="90" step="5.0" style="width:60px;" min="50" max="12000"></td>
       <td>
-        <input type="range" id="cFilterGain1" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="-3">
-        <span id="cFilterGainVal1" style="display:inline-block;width:32px;text-align:right;">-3 dB</span>
+        <input type="range" id="cFilterGain1" class="slider short-gain-slider" min="-6" max="6" step="0.5" value="-3">
+        <span id="cFilterGainVal1" style="display:inline-block;width:40px;text-align:right;">-3 dB</span>
 		</td>
-      <td><input type="number" id="cFilterQ1" value="2" step="1.0" style="width:35px;" min="2" max="15"></td>
+      <td><input type="number" id="cFilterQ1" value="2" step="1.0" style="width:40px;" min="2" max="15"></td>
     </tr>
 	<tr>
 	  <td>2</td>
 	  <td><input type="number" id="cFilterFreq2" value="240" step="5.0" style="width:60px;" min="50" max="12000"></td>
 	  <td>
-        <input type="range" id="cFilterGain2" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="0">
-        <span id="cFilterGainVal2" style="display:inline-block;width:32px;text-align:right;">0 dB</span>
+        <input type="range" id="cFilterGain2" class="slider short-gain-slider" min="-6" max="6" step="0.5" value="0">
+        <span id="cFilterGainVal2" style="display:inline-block;width:40px;text-align:right;">0 dB</span>
 	  </td>
-	<td><input type="number" id="cFilterQ2" value="15" step="1.0" style="width:35px;" min="2" max="15"></td>
+	<td><input type="number" id="cFilterQ2" value="8" step="1.0" style="width:40px;" min="2" max="15"></td>
 	</tr>
 	<tr>
 	<td>3</td>
 	<td><input type="number" id="cFilterFreq3" value="2500" step="5.0" style="width:60px;" min="50" max="12000"></td>
 	<td>
-    <input type="range" id="cFilterGain3" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="3">
-    <span id="cFilterGainVal3" style="display:inline-block;width:32px;text-align:right;">3 dB</span>
+    <input type="range" id="cFilterGain3" class="slider short-gain-slider" min="-6" max="6" step="0.5" value="3">
+    <span id="cFilterGainVal3" style="display:inline-block;width:40px;text-align:right;">3 dB</span>
 	</td>
-	<td><input type="number" id="cFilterQ3" value="5" step="1.0" style="width:35px;" min="2" max="15"></td>
+	<td><input type="number" id="cFilterQ3" value="5" step="1.0" style="width:40px;" min="2" max="15"></td>
 	</tr>
 	<tr>
 	<td>4</td>
 	<td><input type="number" id="cFilterFreq4" value="5000" step="5.0" style="width:60px;" min="50" max="12000"></td>
 	<td>
-    <input type="range" id="cFilterGain4" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="3">
-    <span id="cFilterGainVal4" style="display:inline-block;width:35px;text-align:right;">3 dB</span>
+    <input type="range" id="cFilterGain4" class="slider short-gain-slider" min="-6" max="6" step="0.5" value="3">
+    <span id="cFilterGainVal4" style="display:inline-block;width:40px;text-align:right;">3 dB</span>
 	</td>
-	<td><input type="number" id="cFilterQ4" value="5" step="1.0" style="width:35px;" min="2" max="15"></td>
+	<td><input type="number" id="cFilterQ4" value="2" step="1.0" style="width:40px;" min="2" max="15"></td>
 	</tr>
 	<tr>
 	<td>5</td>
 	<td><input type="number" id="cFilterFreq5" value="8000" step="5.0" style="width:60px;" min="50" max="12000"></td>
 	<td>
-    <input type="range" id="cFilterGain5" class="slider short-gain-slider" min="-6" max="6" step="1.0" value="3">
-    <span id="cFilterGainVal5" style="display:inline-block;width:35px;text-align:right;">3 dB</span>
+    <input type="range" id="cFilterGain5" class="slider short-gain-slider" min="-6" max="6" step="0.5" value="3">
+    <span id="cFilterGainVal5" style="display:inline-block;width:40px;text-align:right;">3 dB</span>
 	</td>
-	<td><input type="number" id="cFilterQ5" value="2" step="1.0" style="width:35px;" min="2" max="15"></td>
+	<td><input type="number" id="cFilterQ5" value="2" step="1.0" style="width:40px;" min="2" max="15"></td>
 	</tr>
     </tbody>
   </table>
@@ -923,7 +923,7 @@ and noninfringement. Use at your own risk.
   </div></div>
 </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js"></script><script>
 
-const evoVersion = "8.03";
+const evoVersion = "0.0.3";
 const baseUrl = 'http://localhost:4735/measurements', speedDelay = 255, maxDistanceLimit = 7.35;
 let micCalFile = new Array(16384).fill(0), audioCtx = null;
 let jsonName = 'receiver_config.avr', jsonType = 'avr', jsonContent = null;
