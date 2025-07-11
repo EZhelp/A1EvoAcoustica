@@ -1,4 +1,4 @@
-# A1 Evo Acoustica beta for testing adjustable EDC mod
+# A1 Evo Acoustica beta for adjustable EDC mod
 Audyssey-based Sound Optimization Tool for Denon/Marantz AVRs.
 
 Harnessing the power of [REW](https://www.roomeqwizard.com/) and proprietary algorithms, A1 Evo aims to produce world-class room correction for MultEQ, MultEQ XT, and XT32 AVRs. Improvements remain worthwhile for basic MultEQ, but improve further with more capable XT & XT32 hardware.
