@@ -1,4 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<!--
 Copyright (c) 2025 OCA (https://www.youtube.com/@OCAudiophile)
 All rights reserved.
 
@@ -24,7 +25,6 @@ Special Notice:
 • Include this license notice in full.
 • Attribute the original author and provide a link to the official project or source.
 
-<!--
 Disclaimer:
 
 This software is provided "as is", without warranty of any kind, express or implied,
@@ -106,6 +106,34 @@ and noninfringement. Use at your own risk.
     color: #fff;
     box-shadow: 0 14px 30px rgba(21, 128, 61, 0.6);
     transform: translateY(-2px) scale(1.03);
+  }
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: linear-gradient(45deg, #6B7280, #6B7280);
+    color: #9CA3AF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
+  }
+  .button2:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: linear-gradient(45deg, #6B7280, #6B7280);
+    color: #9CA3AF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
+  }
+  .button:disabled:hover {
+    background: linear-gradient(45deg, #6B7280, #6B7280);
+    color: #9CA3AF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
+  }
+  .button2:disabled:hover {
+    background: linear-gradient(45deg, #6B7280, #6B7280);
+    color: #9CA3AF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
   }
   .link-container {
     display: flex;
@@ -383,7 +411,7 @@ and noninfringement. Use at your own risk.
     align-items: center;
     gap: 6px;
     margin-top: 1rem;
-	margin-bottom: 2rem;  /* Added this line */
+	  margin-bottom: 2rem;
     font-size: 1rem;
   }
   .rolloff-controls {
@@ -643,7 +671,7 @@ and noninfringement. Use at your own risk.
   <span style="color: #3B82F6; font-weight: 800;">A1 EVO ACOUSTICA</span>
   </h1>
   <h2>
-  <span style="color: #2563EB; font-weight: 200;">Audio Optimization Suite</span>
+  <span style="color: #2563EB; font-weight: 200;">Audio Optimization Suite w/ beta EDC mod</span>
   </h2>
   <button id="buttonADY" onclick="extractMeasurements()" class="button2">
   Extract measurements from<br><span class="lowercase-text">.ady</span> / <span class="lowercase-text">.mqx<br>&</span><br>import them into REW<br>
@@ -829,7 +857,7 @@ and noninfringement. Use at your own risk.
 <h4 
   style="color:#93c5fd; margin-bottom:0.2rem;" 
   title="Use sparingly to further refine dialog to your preference.">
-  Additional C Filters
+  Adjustable EDC Filters
 </h4>
 <table style="width:25%; color:#CBD5E0; font-size:0.7rem; margin-left:auto; margin-right:auto;">
   <thead>
@@ -875,7 +903,7 @@ and noninfringement. Use at your own risk.
     <input type="range" id="cFilterGain4" class="slider short-gain-slider" min="-6" max="6" step="0.5" value="3">
     <span id="cFilterGainVal4" style="display:inline-block;width:40px;text-align:right;">3 dB</span>
 	</td>
-	<td><input type="number" id="cFilterQ4" value="2" step="1.0" style="width:40px;" min="2" max="15"></td>
+	<td><input type="number" id="cFilterQ4" value="5" step="1.0" style="width:40px;" min="2" max="15"></td>
 	</tr>
 	<tr>
 	<td>5</td>
@@ -923,7 +951,7 @@ and noninfringement. Use at your own risk.
   </div></div>
 </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js"></script><script>
 
-const evoVersion = '8.0.7';
+const evoVersion = "0.0.5";
 const baseUrl = 'http://localhost:4735/measurements', speedDelay = 255, maxDistanceLimit = 7.35;
 let micCalFile = new Array(16384).fill(0), audioCtx = null;
 let jsonName = 'receiver_config.avr', jsonType = 'avr', jsonContent = null;
@@ -1024,6 +1052,9 @@ async function extractMeasurements() {
     console.info('No file selected.');
     return;
   }
+  
+  // Disable the start optimization button after user confirms file selection
+  document.getElementById('startEvo').disabled = true;
   jName = file.name;
   jType = jName.split('.').pop();
   console.info(`Extracting measurements from ${jName}...`);
@@ -1241,6 +1272,9 @@ async function extractMeasurements() {
       console.error("Measurement extraction and sending failed:", error.message);
       throwError(error.message || "An unexpected error occurred during measurement processing.");
   } finally {
+      // Re-enable the start optimization button after extraction completes or fails
+      document.getElementById('startEvo').disabled = false;
+      
       if (inv_micCal && inv_micCal.length > 0) inv_micCal.length = 0;
   }}
 async function inputFile(file) {
