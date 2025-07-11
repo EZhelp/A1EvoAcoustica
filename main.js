@@ -1112,9 +1112,9 @@ async function mainMenu() {
     const measureDisabled = !configExistsAndValid;
     const choices = [
         {name: configOptionName, value: 'config'},
-        {name: `2. Measure System Speakers & Subwoofers${measureDisabled ? ' (Requires valid configuration file)' : ''}`, value: 'measure', disabled: measureDisabled ? 'Requires valid configuration file' : false},
-        {name: `3. Start Optimizer (opens 'A1 Evo' in your browser)${optimizeDisabled ? ' (Requires valid configuration)' : ''}`, value: 'optimize', disabled: optimizeDisabled ? 'Requires valid configuration file' : false},
-        {name: `4. Transfer Optimized Calibration (.oca File) to your AVR${transferDisabled ? ' (Requires valid configuration)' : ''}`, value: 'transfer', disabled: transferDisabled ? 'Requires valid configuration file' : false},
+        {name: '2. Measure System Speakers & Subwoofers', value: 'measure', disabled: measureDisabled ? 'Requires valid configuration file' : false},
+        {name: '3. Start Optimizer (opens \'A1 Evo\' in your browser)', value: 'optimize', disabled: optimizeDisabled ? 'Requires valid configuration file' : false},
+        {name: '4. Transfer Optimized Calibration (.oca File) to your AVR', value: 'transfer', disabled: transferDisabled ? 'Requires valid configuration file' : false},
         new inquirer.Separator(),
         {name: 'Exit', value: 'exit'},
     ];
