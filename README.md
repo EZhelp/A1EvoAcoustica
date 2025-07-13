@@ -1,9 +1,7 @@
 # A1 Evo Acoustica w/ beta adjustable EDC mod
 Note: The releases on this fork are used for beta testing.
 
-Attn: Version 0.0.6 has the same EDC behavior as the main branch 8.06 when checked.  
-However, when the ALT key is held while checking the EDC box, it gives you access to the filter values.
-(macOS: keyboard "Option" key instead of ALT should work)
+Attn: Version 0.0.6 has the same EDC behavior as the main branch 8.06 when checked. However, when the ALT key is held while checking the EDC box, it gives you access to the filter values.  (macOS: keyboard "Option" key instead of ALT should work)
 
 Audyssey-based Sound Optimization Tool for Denon/Marantz AVRs.
 
