@@ -3,6 +3,8 @@ Note: The releases on this fork are used for beta testing.
 
 Attn: Version 0.0.6 has the same EDC behavior as the main branch 8.06 when checked. However, when the ALT key is held while checking the EDC box, it gives you access to the filter values.  (macOS: keyboard "Option" key instead of ALT should work)
 
+*Warning: A user changing values in this modified fork, needs to have the skill set to ID the issue and understand what these settings do.
+
 Audyssey-based Sound Optimization Tool for Denon/Marantz AVRs.
 
 Harnessing the power of [REW](https://www.roomeqwizard.com/) and proprietary algorithms, A1 Evo aims to produce world-class room correction for MultEQ, MultEQ XT, and XT32 AVRs. Improvements remain worthwhile for basic MultEQ, but improve further with more capable XT & XT32 hardware.
