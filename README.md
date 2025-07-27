@@ -1,7 +1,7 @@
 # A1 Evo Acoustica w/ beta adjustable EDC mod
 Note: The releases on this fork are used for beta testing.
 
-Attn: Version 0.0.9 has the same EDC behavior as the main branch 8.09 when checked. However, when the ALT key is held while clicking the EDC box, it gives you access to the filter values.  (macOS: keyboard "Option" key)
+Attn: This version has the same EDC behavior as the main branch when EDC is checked. However, when the ALT key is held while clicking the EDC box, it gives you access to the filter values.  (macOS: keyboard "Option" key)
 
 *Warning: A user changing EDC values in this modified fork, needs to have the skill set to ID the issue and understand what these settings do (NOT random).
 
