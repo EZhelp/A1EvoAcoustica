@@ -108,8 +108,10 @@ const decFilterXT32Sat129_taps = [
     0.00014951751, -0.00016613922, -0.00037544663, -0.0004376953, -0.0003741896, 
     -0.00024198946, -0.0001022896, 0.0000025561833, 0.00005722275, 0.000068608439, 
     0.000054528296, 0.000032770109, 0.000014723354, 0.0000043782347];
-const EXPECTED_NON_XT32_FLOAT_COUNTS = {'XT': {speaker: 512, sub: 512}, 'MultEQ': {speaker: 128, sub: 512 }};
-const MEASUREMENT_CHANNEL_ORDER_FIXEDA = ["FL", "C", "FR", "FWR", "SRA", "SRB", "SBR", "SBL", "SLB", "SLA", "FWL", "FHL", "CH", "FHR", "TFR", "TMR", "TRR", "SHR", "RHR", "TS", "RHL", "SHL", "TRL", "TML", "TFL", "FDL", "FDR", "SDR", "BDR", "SDL", "BDL", "SW1", "SW2", "SW3", "SW4"];
+const EXPECTED_NON_XT32_FLOAT_COUNTS = {'XT': {speaker: 512, sub: 512}, 'MultEQ': {speaker: 128, sub: 512}};
+//const MEASUREMENT_CHANNEL_ORDER_FIXEDA = ["FL", "C", "FR", "FWR", "SRA", "SRB", "SBR", "SBL", "SLB", "SLA", "FWL", "FHL", "CH", "FHR", "TFR", "TMR", "TRR", "SHR", "RHR", "TS", "RHL", "SHL", "TRL", "TML", "TFL", "FDL", "FDR", "SDR", "BDR", "SDL", "BDL", "SW1", "SW2", "SW3", "SW4"];
+const MEASUREMENT_CHANNEL_ORDER_FIXEDA = ["FL", "C", "FR", "FWR", "SRA", "SBR", "SBL", "SLA", "FWL", "CH", "FHR", "TFR", "FDR", "TMR", "TRR", "SHR", "RHR", "SDR", "BDR", "BDL", "SDL", "RHL", "SHL", "TRL", "TML", "FDL", "TFL", "FHL", "TS", "LFE", "SW1", "SW1", "SW2", "SW3", "SW4"];
+
 
 const decomposeFilter = (filterTaps, M) => {
     const L = filterTaps.length;
@@ -1112,9 +1114,9 @@ async function mainMenu() {
     const measureDisabled = !configExistsAndValid;
     const choices = [
         {name: configOptionName, value: 'config'},
-        {name: `2. Measure System Speakers & Subwoofers${measureDisabled ? ' (Requires valid configuration file)' : ''}`, value: 'measure', disabled: measureDisabled ? 'Requires valid configuration file' : false},
-        {name: `3. Start Optimizer (opens 'A1 Evo' in your browser)${optimizeDisabled ? ' (Requires valid configuration)' : ''}`, value: 'optimize', disabled: optimizeDisabled ? 'Requires valid configuration file' : false},
-        {name: `4. Transfer Optimized Calibration (.oca File) to your AVR${transferDisabled ? ' (Requires valid configuration)' : ''}`, value: 'transfer', disabled: transferDisabled ? 'Requires valid configuration file' : false},
+        {name: '2. Measure System Speakers & Subwoofers', value: 'measure', disabled: measureDisabled ? 'Requires valid configuration file' : false},
+        {name: '3. Start Optimizer (opens \'A1 Evo\' in your browser)', value: 'optimize', disabled: optimizeDisabled ? 'Requires valid configuration file' : false},
+        {name: '4. Transfer Optimized Calibration (.oca File) to your AVR', value: 'transfer', disabled: transferDisabled ? 'Requires valid configuration file' : false},
         new inquirer.Separator(),
         {name: 'Exit', value: 'exit'},
     ];
