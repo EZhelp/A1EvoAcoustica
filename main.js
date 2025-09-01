@@ -110,7 +110,7 @@ const decFilterXT32Sat129_taps = [
     0.000054528296, 0.000032770109, 0.000014723354, 0.0000043782347];
 const EXPECTED_NON_XT32_FLOAT_COUNTS = {'XT': {speaker: 512, sub: 512}, 'MultEQ': {speaker: 128, sub: 512}};
 //const MEASUREMENT_CHANNEL_ORDER_FIXEDA = ["FL", "C", "FR", "FWR", "SRA", "SRB", "SBR", "SBL", "SLB", "SLA", "FWL", "FHL", "CH", "FHR", "TFR", "TMR", "TRR", "SHR", "RHR", "TS", "RHL", "SHL", "TRL", "TML", "TFL", "FDL", "FDR", "SDR", "BDR", "SDL", "BDL", "SW1", "SW2", "SW3", "SW4"];
-const MEASUREMENT_CHANNEL_ORDER_FIXEDA = ["FL", "C", "FR", "FWR", "SRA", "SBR", "SBL", "SLA", "FWL", "CH", "FHR", "TFR", "FDR", "TMR", "TRR", "SHR", "RHR", "SDR", "BDR", "BDL", "SDL", "RHL", "SHL", "TRL", "TML", "FDL", "TFL", "FHL", "TS", "LFE", "SW1", "SW1", "SW2", "SW3", "SW4"];
+const MEASUREMENT_CHANNEL_ORDER_FIXEDA = ["FL", "C", "FR", "FWR", "SRA", "SBR", "SBL", "SLA", "FWL", "CH", "FHR", "TFR", "FDR", "TMR", "TRR", "SHR", "RHR", "SDR", "BDR", "BDL", "SDL", "RHL", "SHL", "TRL", "TML", "FDL", "TFL", "FHL", "TS", "LFE", "SW1", "SW2", "SW3", "SW4"];
 
 
 const decomposeFilter = (filterTaps, M) => {
@@ -3671,4 +3671,5 @@ async function getChannelImpulseResponse(socket, channelId) {
             }
         });
     });}
+
 initializeApp();
