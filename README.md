@@ -1,4 +1,4 @@
-# Acoustica w/ optional adjustable "Enhanced Dialog Clarity" PEQ filters.
+# Acoustica w/ adjustable "Enhanced Dialog Clarity" PEQ filters.
 Note: This beta fork is intended to behave the same as the main branch of Acoustica created by ObsessiveCompulsiveAudiophile (OCA)
 However, with the small change in this fork, if/when the ALT key is held while clicking the "Enhanced Dialog Clarity" box, it gives you access to the EDC filter values.  (macOS: keyboard "Option" key)
 
