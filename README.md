@@ -1,10 +1,10 @@
 # Acoustica w/ adjustable "Enhanced Dialog Clarity" PEQ filters.
-Note: This beta fork is intended to behave the same as the main branch of Acoustica created by ObsessiveCompulsiveAudiophile (OCA)
+Note: This beta fork is intended to behave the same as the main branch of Acoustica created by ObsessiveCompulsiveAudiophile (OCA).
 However, with the small change in this fork, if/when the ALT key is held while clicking the "Enhanced Dialog Clarity" box, it gives you access to the EDC filter values.  (macOS: keyboard "Option" key)
 
 *Warning: A user that decides to optionally change the EDC values in this fork, needs to have the skillset to ID the issue they are resolving and understand what these settings do to the C channel. 
-*This is NOT meant for some random values to be entered... *of course you are welcome to use this fork at your own risk*
-The settings you use in the EDC filter will be reflected in REW's graphs for Cfinal and Cfilter.
+*This is NOT meant for some random values to be entered... *of course you are welcome to use this fork at your own risk*. 
+The settings you use in the EDC filter will be reflected in REW's graphs for Cfinal and Cfilter. 
 This is an optional setting for advanced users. 
 **For those who don't like to see options, simply don't click on the "advanced settings" button in Acoustica.
 
