@@ -1,9 +1,12 @@
-# A1 Evo Acoustica w/ beta adjustable EDC mod
-Note: The releases on this fork are used for beta testing.
+# Acoustica w/ optional adjustable "Enhanced Dialog Clarity" PEQ filters.
+Note: This beta fork is intended to behave the same as the main branch of Acoustica created by ObsessiveCompulsiveAudiophile (OCA)
+However, with the small change in this fork, if/when the ALT key is held while clicking the "Enhanced Dialog Clarity" box, it gives you access to the EDC filter values.  (macOS: keyboard "Option" key)
 
-Attn: This version has the same EDC behavior as the main branch when EDC is checked. However, when the ALT key is held while clicking the EDC box, it gives you access to the filter values.  (macOS: keyboard "Option" key)
-
-*Warning: A user changing EDC values in this modified fork, needs to have the skill set to ID the issue and understand what these settings do (NOT random).
+*Warning: A user that decides to optionally change the EDC values in this fork, needs to have the skillset to ID the issue they are resolving and understand what these settings do to the C channel. 
+*This is NOT meant for some random values to be entered... *of course you are welcome to use this fork at your own risk*
+The settings you use in the EDC filter will be reflected in REW's graphs for Cfinal and Cfilter.
+This is an optional setting for advanced users. 
+**For those who don't like to see options, simply don't click on the "advanced settings" button in Acoustica.
 
 Audyssey-based Sound Optimization Tool for Denon/Marantz AVRs.
 
